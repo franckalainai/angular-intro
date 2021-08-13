@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
   name = 'Franck';
   counter = null;
+
+  myColor = 'gray';
+
   people = [
     {name: 'franck', age: 37},
     {name: 'martial', age: 40},
@@ -18,6 +21,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(){
     this.counter = 0;
+    this.myColor = 'red'
   }
 
   btnClicked = () => {

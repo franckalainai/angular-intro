@@ -2,12 +2,12 @@
   <h1 *ngIf="counter > 0">
     My name is {{ name }}
   </h1>
-  <p>{{ counter }}</p>
+  <p [ngStyle]="{'background-color': myColor}">{{ counter }}</p>
   <input type="text" [(ngModel)]="name">
   <button (click)="btnClicked()">Click Me</button>
   <div *ngFor="let person of people">
-    <h3 *ngIf="person.age > 25">
-    {{ person.name }} is {{ person.age }} years old
+    <h3 [ngClass]="{'green': person.age > 30}">
+      {{ person.name }} is {{ person.age }} years old
     </h3>
   </div>
 </div>
