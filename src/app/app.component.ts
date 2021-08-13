@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   name = 'Franck';
-  counter = 0;
+  counter = null;
   people = [
     {name: 'franck', age: 37},
     {name: 'martial', age: 40},
@@ -15,6 +15,10 @@ export class AppComponent {
     {name: 'yves', age: 20},
     {name: 'leo', age: 30}
   ];
+
+  ngOnInit(){
+    this.counter = 0;
+  }
 
   btnClicked = () => {
     this.counter++
