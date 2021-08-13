@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name = 'Franck';
-  today = new Date()
+  counter = 0;
+
+  btnClicked = () => {
+    this.counter++
+  }
 }
