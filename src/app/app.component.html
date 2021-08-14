@@ -2,13 +2,19 @@
   <h1 *ngIf="counter > 0">
     My name is {{ name }}
   </h1>
-  <p [ngStyle]="{'background-color': myColor}">{{ counter }}</p>
-  <input type="text" [(ngModel)]="name">
-  <button (click)="btnClicked()">Click Me</button>
-  <div *ngFor="let person of people">
-    <h3 [ngClass]="{'green': person.age > 30}">
-      {{ person.name }} is {{ person.age }} years old
-    </h3>
-  </div>
+  <nav>
+    <a routerLink='first'>First</a>
+    <br>
+    <a routerLink='second'>Second</a>
+  </nav>
 </div>
 <router-outlet></router-outlet>
+
+<p [ngStyle]="{'background-color': myColor}">{{ counter }}</p>
+<input type="text" [(ngModel)]="name">
+<button (click)="btnClicked()">Click Me</button>
+<div *ngFor="let person of people">
+  <h3 [ngClass]="{'green': person.age > 30}">
+    {{ person.name }} is {{ person.age }} years old
+  </h3>
+</div>
