@@ -1,4 +1,4 @@
 <p>second works!</p>
+{{ childEcole }}
 <button (click)="backLocation()">Go Back</button>
-<app-child [animal]="myAnimal"></app-child>
-
+<app-child [monEcole]="ecole" (changed)="chidChanged($event)"></app-child>

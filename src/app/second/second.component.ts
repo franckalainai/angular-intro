@@ -9,7 +9,12 @@ import { Location } from '@angular/common';
 })
 export class SecondComponent implements OnInit {
 
-  myAnimal = 'cat';
+  ecole = 'ITA'
+  childEcole = '';
+
+  chidChanged = (evt) => {
+    this.childEcole = evt;
+  }
 
   constructor(private route: ActivatedRoute, private location: Location) { }
 
